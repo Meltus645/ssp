@@ -8,7 +8,7 @@ const get_data =async url =>{
 
 
 const get_suggestions =async q =>{
-    const services =await get_data("http://127.0.0.1:5501/app/data.json"); 
+    const services =await get_data("https://meltus645.github.io/ssp/data.json"); 
     const suggestions =[]; 
     const matched =[...services].filter(({service}) =>  service.toLowerCase().includes(q.toLowerCase()));
     matched.join(',')
