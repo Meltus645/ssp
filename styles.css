@@ -1,0 +1,191 @@
+*::before, *, *::after{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+html, body{
+    height: 100%;
+} 
+.d-flex{
+    display: flex;
+}
+.justify-content-center{
+    justify-content: center;
+} 
+.justify-content-between{
+    justify-content: space-between;
+}
+.align-items-center{
+    align-items: center;
+}
+.flex-column{
+    flex-direction: column;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.gap-1{
+    gap: 1rem;
+}
+.service-item{
+    width: 200px;
+    padding: 1rem;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .2) ;
+    border-radius: .5rem;
+}
+.pb-1{
+    padding-bottom: 1rem;
+}
+.h-100{
+    height: 100%;
+} 
+.w-100{
+    width: 100%;
+}
+.w-75{
+    width: 75%;
+}
+.header{ 
+    height: 50px;
+    padding: 0 1rem;
+} 
+.navbar >* a{
+    display: block;
+    width: max-content;
+    padding: 0 .5rem;
+    color: rgba(0, 0, 0, .5);
+    font-weight: 500;
+} 
+.navbar >* a:hover{ 
+    color: rgba(0, 0, 0, .7);
+}
+form{
+    position: relative;  
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, .2); 
+}
+form input{
+    display: inline-block; 
+    padding: .5rem 1rem;
+}
+
+form input[type=submit]{ 
+    cursor: pointer;
+    background-color: dodgerblue;
+    color: rgba(255, 255, 255, 1);
+}
+.suggestions-list{
+    position: absolute;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
+    left:0; bottom: 0; right: 0;  
+    transform: translateY(100%);
+    max-height: 100px;
+    overflow: auto;
+    background-color: white;
+}
+.suggestions-list >li{
+    padding:.5rem 1rem;
+    cursor: pointer;
+}
+
+.suggestions-list >li:hover{
+    background-color: rgba(0, 0, 0, .08);
+}
+
+.banner{
+    height: 350px;
+    background-image: url(ssp.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    margin-bottom: 2rem;
+}
+.banner h1{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.main-content{
+    height: calc(100% - 50px);
+}
+
+a.active{
+    color: white!important;
+}
+.text-center{
+    text-align: center;
+}
+.faq{
+    width: 80%;
+    margin: auto;
+}
+.faq ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+}
+.faq ul >li{
+    width: 100%;
+    background-color: white;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .08);
+    padding: 1rem;
+}
+
+.w-80{
+    width: 80%;
+} 
+.m-auto{
+    margin: auto;
+}
+.core-values{
+    gap: 2rem;
+    padding: 2rem;
+}
+.core-values li{
+    flex: 33.3%;
+    padding:1rem;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .2); 
+}
+
+.items{ 
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+.item{
+    padding:1rem;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .2); 
+    flex: 33%;
+    border-radius: .5rem;
+}
+.bg-blue{
+    background-color: dodgerblue;
+} 
+.text-white{
+    color:white;
+}
+
+img{
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+    border: none;
+}
+
+.guide section h2{
+    padding-bottom: .5rem;
+}

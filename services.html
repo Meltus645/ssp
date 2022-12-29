@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="home">
+    <header class="header d-flex justify-content-between bg-blue text-white">
+        <h3 class="brand_name">Short Services Search</h3>
+        <ul class="d-flex navbar">
+            <li><a href="./">Home</a></li>
+            <li><a href="./about.html">About Me</a></li>
+            <li><a href="./information.html">Information</a></li>
+            <li><a href="./marketing.html">Marketing</a></li> 
+            <li><a href="./guide.html">User Guide</a></li>
+        </ul>
+    </header>
+    <main class="h-100 w-100 d-flex justify-content-center align-items-center flex-column">
+        <h1 class="pb-1">Services related to <span id="q-name"></span> </h1>
+        <ul id="services" class="w-80 d-flex flex-wrap gap-1 justify-content-center align-items-center"></ul>
+    </main>
+    <script src="./script.js"></script>
+    <script>
+        const q =document.URL.split('=')[1];
+        document.getElementById('q-name').textContent =q;
+        const services_matched =async () =>{
+            let services_found ='';
+            const data =await get_data("http://127.0.0.1:5501/app/data.json");
+            [...data].filter(service =>service.service.toLowerCase().includes(q.toLowerCase()))
+            .forEach(({service, provider, phone}) =>{
+                services_found =`
+                    ${services_found}
+                    <li class ="service-item">
+                        <h3>${service}</h3>
+                        <div class ="d-flex justify-content-between"><span>${provider}</span><a href ="tel:${phone}">Call</a></div>
+                    </li>
+                `;
+            })
+            if(!services_found.length) services_found =`<li class ="service-item">No service Found<li>`;
+            document.getElementById('services').innerHTML =services_found;
+        }
+        services_matched();
+    </script>
+</body>
+</html>

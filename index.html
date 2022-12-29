@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="home">
+    <header class="header d-flex justify-content-between align-items-center bg-blue text-white">
+        <h3 class="brand_name">Short Services Search</h3>
+        <ul class="d-flex navbar">
+            <li><a href="./" class="active">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./information.html">Information</a></li>
+            <li><a href="./marketing.html">Marketing</a></li> 
+            <li><a href="./guide.html">Guide</a></li>
+        </ul>
+    </header>
+    <main class="w-100 d-flex justify-content-center align-items-center main-content banner">
+        <div class="content-box">
+            <form action="./services.html" method="get">   
+                <input type="text" name="q" onkeyup="suggest(this)" placeholder="Enter a search keyword">
+                <input type="submit" value="Search">
+                <ul id="suggestions" class="suggestions-list"></ul> 
+            </form>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
