@@ -28,7 +28,7 @@
         document.getElementById('q-name').textContent =q;
         const services_matched =async () =>{
             let services_found ='';
-            const data =await get_data("http://127.0.0.1:5501/app/data.json");
+            const data =await get_data("https://meltus645.github.io/ssp/data.json");
             [...data].filter(service =>service.service.toLowerCase().includes(q.toLowerCase()))
             .forEach(({service, provider, phone}) =>{
                 services_found =`
